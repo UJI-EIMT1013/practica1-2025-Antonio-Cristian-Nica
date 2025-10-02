@@ -7,12 +7,35 @@ public class Practica1 {
     //EJERCICIO 1
     public static Set<Integer> multiplos (Iterator<Integer> it) {
         //TODO
-        return null;
+        Set<Integer> elementos = new HashSet<Integer>();
+        Set<Integer> resultado = new HashSet<Integer>();
+        while(it.hasNext()){
+            int n = it.next();
+            if(n != 0){
+                if(elementos.contains(n)){
+                    resultado.add(n);
+                }
+                elementos.add(n);
+            }
+        }
+
+        for(int a : elementos){
+            for(int b : elementos){
+
+                if(a != b && a % b == 0){
+                    resultado.add(a);
+                    break;
+                }
+            }
+        }
+
+        return resultado;
     }
 
     //EJERCICIO2
     public static void separate (Set<Integer> cuadrados, Set<Integer> noCuadrados)  {
         //TODO
+        
 
     }
 
